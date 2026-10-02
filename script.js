@@ -5,7 +5,10 @@
    Formato: código do país + DDD + número, só dígitos.
    ============================================================ */
 const CONFIG = {
-  whatsapp: "5541999999999", // <-- troque pelo WhatsApp da FeedTech
+  whatsapp: "5543999514569", // <-- troque pelo WhatsApp da FeedTech
+  margem: 0.3,
+  filamento: 95,
+  energia: 5,
 };
 
 const grid = document.getElementById("grid");
@@ -55,6 +58,14 @@ function cardTemplate(p) {
       ? `<span class="more">+${p.cores.length - 4}</span>`
       : "";
 
+  let valor = (CONFIG.filamento * p.peso) / 1000;
+  console.log(p.nome);
+  console.log(valor);
+  let valorMargeado = valor * CONFIG.margem;
+  valor = valor + valorMargeado + CONFIG.energia;
+
+  console.log(valor);
+
   return `
     <article class="card" data-id="${p.id}">
       <div class="card-media" style="background-image: url('${p.imagem}'); background-size: cover; background-position: center;">
@@ -66,7 +77,7 @@ function cardTemplate(p) {
         <p class="desc">${p.descricao}</p>
         <div class="colors-row">${swatches}${extra}</div>
         <div class="card-footer">
-          <div class="price">${money(p.valor)}<span>a partir de</span></div>
+          <div class="price">${money(valor)}<span>a partir de</span></div>
           <button class="btn-quote" data-quote="${p.id}">
             Pedir orçamento
           </button>

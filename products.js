@@ -9,7 +9,6 @@
      nome: "Nome do produto",
      categoria: "Nome da categoria",
      descricao: "Frase curta sobre o produto",
-     valor: 49.90,                  // número, em reais
      quantidade: 12,                // estoque disponível (0 = sob encomenda)
      cores: [
        { nome: "Preto", hex: "#1a1a1a" },
@@ -28,7 +27,7 @@ const PRODUCTS = [
     nome: "Chaveiro Cubo Mario Bros",
     categoria: "Acessórios",
     descricao: "Chaveiro em formato de cubo interrogação do Mario Bros.",
-    valor: 15.0,
+    peso: 15,
     quantidade: 4,
     cores: [{ nome: "Amarelo", hex: "#ffd700" }],
     imagem: "assets/products/mario.png",
@@ -38,7 +37,7 @@ const PRODUCTS = [
     nome: "Chaveiro Bolacha Oreo",
     categoria: "Acessórios",
     descricao: "Chaveiro divertido em formato de biscoito/bolacha Oreo.",
-    valor: 12.0,
+    peso: 13,
     quantidade: 6,
     cores: [
       { nome: "Preto", hex: "#1a1a1a" },
@@ -51,7 +50,7 @@ const PRODUCTS = [
     nome: "Chaveiro Mochila Perdida",
     categoria: "Acessórios",
     descricao: "Chaveiro temático Mochila Perdida.",
-    valor: 15.0,
+    peso: 12,
     quantidade: 6,
     cores: [
       { nome: "Amarelo", hex: "#ffd700" },
@@ -64,7 +63,7 @@ const PRODUCTS = [
     nome: "Chaveiro Suporte de Celular/Tablet",
     categoria: "Acessórios & Utilidades",
     descricao: "Chaveiro funcional que serve como suporte para celular/tablet",
-    valor: 25.0,
+    peso: 18,
     quantidade: 4,
     cores: [{ nome: "Preto", hex: "#1a1a1a" }],
     imagem: "assets/products/suporte-celular.png",
@@ -74,7 +73,7 @@ const PRODUCTS = [
     nome: "Fidget Jumper",
     categoria: "Brinquedos & Antiestresse",
     descricao: "Brinquedo tátil antiestresse fidget jumper.",
-    valor: 10.0,
+    peso: 17,
     quantidade: 4,
     cores: [{ nome: "Sortido", hex: "#888888" }],
     imagem: "assets/products/fidget-jumper.png",
@@ -85,7 +84,7 @@ const PRODUCTS = [
     categoria: "Decoração & Tecnologia",
     descricao:
       "Plaquinha interativa com chip NFC para redirecionamento ao Spotify.",
-    valor: 29.9,
+    peso: 12,
     quantidade: 1,
     cores: [
       { nome: "Preto", hex: "#1a1a1a" },
@@ -99,7 +98,7 @@ const PRODUCTS = [
     categoria: "Decoração & Tecnologia",
     descricao:
       "Plaquinha interativa com tecnologia NFC para perfil do Instagram.",
-    valor: 29.9,
+    peso: 12,
     quantidade: 1,
     cores: [{ nome: "Preto", hex: "#1a1a1a" }],
     imagem: "assets/products/plaquinha-insta.png",
@@ -110,7 +109,7 @@ const PRODUCTS = [
     categoria: "Organização",
     descricao:
       "Suporte temático do Deadpool em acabamento preto para fones de ouvido.",
-    valor: 49.9,
+    peso: 365,
     quantidade: 1,
     cores: [{ nome: "Preto", hex: "#1a1a1a" }],
     imagem: "assets/products/deadpool.png",
@@ -120,7 +119,7 @@ const PRODUCTS = [
     nome: "Suporte para Óculos Gato Cinza",
     categoria: "Organização & Decoração",
     descricao: "Suporte decorativo em formato de gato para apoiar óculos.",
-    valor: 35.0,
+    peso: 107,
     quantidade: 1,
     cores: [{ nome: "Cinza", hex: "#808080" }],
     imagem: "assets/products/cat.png",
@@ -131,7 +130,7 @@ const PRODUCTS = [
     categoria: "Decoração",
     descricao:
       "Conjunto decorativo com os 3 macacos sábios (não veja, não ouça, não fale).",
-    valor: 45.0,
+    peso: 20,
     quantidade: 1,
     cores: [{ nome: "Cinza", hex: "#808080" }],
     imagem: "assets/products/macacos.png",
@@ -141,7 +140,7 @@ const PRODUCTS = [
     nome: "Barquinho BambuLab Branco (Benchy)",
     categoria: "Decoração & Colecionáveis",
     descricao: "Barquinho de teste de impressão 3D (Benchy) na cor branca.",
-    valor: 10.0,
+    peso: 15,
     quantidade: 1,
     cores: [{ nome: "Branco", hex: "#f2f2f2" }],
     imagem: "assets/products/barquinho.png",
@@ -152,7 +151,7 @@ const PRODUCTS = [
     categoria: "Expositores & Organização",
     descricao:
       "Torre expositora giratória para organização e exibição de chaveiros.",
-    valor: 59.9,
+    peso: 101,
     quantidade: 1,
     cores: [{ nome: "Amarelo", hex: "#ffd700" }],
     imagem: "assets/products/expositor.png",
