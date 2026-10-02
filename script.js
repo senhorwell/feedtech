@@ -47,7 +47,7 @@ function cardTemplate(p) {
     .slice(0, 4)
     .map(
       (c) =>
-        `<span class="swatch" style="background:${c.hex}" title="${c.nome}"></span>`
+        `<span class="swatch" style="background:${c.hex}" title="${c.nome}"></span>`,
     )
     .join("");
   const extra =
@@ -57,10 +57,9 @@ function cardTemplate(p) {
 
   return `
     <article class="card" data-id="${p.id}">
-      <div class="card-media">
+      <div class="card-media" style="background-image: url('${p.imagem}'); background-size: cover; background-position: center;">
         <span class="cat-pill">${p.categoria}</span>
         <span class="stock-pill ${stock.cls}">${stock.label}</span>
-        <span>${p.icone}</span>
       </div>
       <div class="card-body">
         <h3>${p.nome}</h3>
@@ -80,7 +79,8 @@ function cardTemplate(p) {
 function renderGrid() {
   const term = searchTerm.trim().toLowerCase();
   const filtered = PRODUCTS.filter((p) => {
-    const matchesCategory = activeCategory === "Todos" || p.categoria === activeCategory;
+    const matchesCategory =
+      activeCategory === "Todos" || p.categoria === activeCategory;
     const matchesSearch =
       !term ||
       p.nome.toLowerCase().includes(term) ||
@@ -123,7 +123,7 @@ function fillProductSelect(preselectId) {
   productSelect.innerHTML =
     `<option value="">Orçamento geral (a combinar)</option>` +
     PRODUCTS.map(
-      (p) => `<option value="${p.id}">${p.nome} — ${money(p.valor)}</option>`
+      (p) => `<option value="${p.id}">${p.nome} — ${money(p.valor)}</option>`,
     ).join("");
   if (preselectId) productSelect.value = preselectId;
 }
